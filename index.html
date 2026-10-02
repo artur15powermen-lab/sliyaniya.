@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Объединение групп | Мониторинг</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  
+  <header class="top-panel">
+    <div class="title-box">
+      <h1>Оптимизация и слияние групп</h1>
+      <p>Автоматический расчет наполняемости и синхронизации потоков</p>
+    </div>
+
+    <div class="filter-wrapper">
+      <label class="filter-label" for="branchFilter">Выберите филиал:</label>
+      <select id="branchFilter">
+        <option value="Горький">Горький</option>
+        <option value="Юнусабад">Юнусабад</option>
+        <option value="Тинчлик">Тинчлик</option>
+        <option value="Чиланзар">Чиланзар</option>
+        <option value="Сергели">Сергели</option>
+        <option value="Минор">Минор</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- ЕДИНАЯ КОРОБКА (КЛАСТЕР) ДЛЯ ФИЛИАЛА ГОРЬКИЙ -->
+  <section class="merge-box" data-branch="Горький">
+    
+    <div class="merge-box-header">
+      <div class="cluster-title">
+        <span class="branch-badge"><span class="badge-dot"></span>Филиал Горький</span>
+        <span>Frontend слияния</span>
+      </div>
+      <span style="font-size: 12px; color: var(--text-muted);">Статус: Рекомендовано слияние</span>
+    </div>
+
+    <div class="cluster-grid">
+      
+      <article class="card">
+        <div class="card-header">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">Поток A</span>
+          <div class="direction-tag dir-frontend">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nBG-266</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar">РК</div>
+            <div class="mentor-name">Ментор: <span>Рахматулла Кобилов</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget">
+          <div class="progress-meta">
+            <span>Студентов: <strong>6</strong> / 12</span>
+            <span style="color: var(--amber); font-weight: 600;">50%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 40%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Пн • Ср • Пт (17:30)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Старт</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Марта 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <div class="flow-sign">+</div>
+
+      <article class="card">
+        <div class="card-header">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">Поток B</span>
+          <div class="direction-tag dir-frontend">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nBG-339</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar">ЭК</div>
+            <div class="mentor-name">Ментор: <span>Эльнора Камолова</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget">
+          <div class="progress-meta">
+            <span>Студентов: <strong>4</strong> / 12</span>
+            <span style="color: var(--amber); font-weight: 600;">33,3%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 27%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Пн • Ср • Пт (18:40)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Старт</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Марта 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <div class="flow-sign">➔</div>
+
+      <article class="card card-merged">
+        <div class="merged-banner">ИТОГ СЛИЯНИЯ</div>
+
+        <div class="card-header">
+          <span style="font-size: 12px; color: #a5b4fc; font-weight: 700;">Единый поток</span>
+          <div class="direction-tag dir-merged">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nBG-266</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar avatar-duo">DUO</div>
+            <div class="mentor-name">Менторы: <span>Р. Кобилов / Э. Камолова</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget" style="border-color: rgba(99, 102, 241, 0.3);">
+          <div class="progress-meta">
+            <span>Итого студентов: <strong>10</strong> / 12</span>
+            <span class="efficiency-tag">84%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 67%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer" style="border-color: rgba(99, 102, 241, 0.2);">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val" style="color: #38bdf8;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Пн • Ср • Пт (17:30)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Единый старт</span>
+            <span class="val" style="color: #a78bfa;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Марта 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+  </section>
+
+    <section class="merge-box" data-branch="Горький">
+    
+    <div class="merge-box-header">
+      <div class="cluster-title">
+        <span class="branch-badge"><span class="badge-dot"></span>Филиал Горький</span>
+        <span>Frontend слияния</span>
+      </div>
+      <span style="font-size: 12px; color: var(--text-muted);">Статус: Рекомендовано слияние</span>
+    </div>
+
+    <div class="cluster-grid">
+      
+      <article class="card">
+        <div class="card-header">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">Поток A</span>
+          <div class="direction-tag dir-frontend">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nBG-380</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar">ЭК</div>
+            <div class="mentor-name">Ментор: <span>Эльнора Камолова</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget">
+          <div class="progress-meta">
+            <span>Студентов: <strong>2</strong> / 12</span>
+            <span style="color: var(--amber); font-weight: 600;">16%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 40%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Вт • Чт • Сб (16:20)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Старт</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Апрель 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <div class="flow-sign">+</div>
+
+      <article class="card">
+        <div class="card-header">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">Поток A</span>
+          <div class="direction-tag dir-frontend">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nBG-383</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar">ЭК</div>
+            <div class="mentor-name">Ментор: <span>Эльнора Камолова</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget">
+          <div class="progress-meta">
+            <span>Студентов: <strong>8</strong> / 12</span>
+            <span style="color: var(--amber); font-weight: 600;">66,7%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 40%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Вт • Чт • Сб (17:30)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Старт</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Марта 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <div class="flow-sign">➔</div>
+
+      <article class="card card-merged">
+        <div class="merged-banner">ИТОГ СЛИЯНИЯ</div>
+
+        <div class="card-header">
+          <span style="font-size: 12px; color: #a5b4fc; font-weight: 700;">Единый поток</span>
+          <div class="direction-tag dir-merged">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nBG-383</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar avatar-duo">ЭК</div>
+            <div class="mentor-name">Менторы: <span>Э. Камолова</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget" style="border-color: rgba(99, 102, 241, 0.3);">
+          <div class="progress-meta">
+            <span>Итого студентов: <strong>10</strong> / 12</span>
+            <span class="efficiency-tag">84%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 67%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer" style="border-color: rgba(99, 102, 241, 0.2);">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val" style="color: #38bdf8;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Вт • Чт • Сб (17:30)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Единый старт</span>
+            <span class="val" style="color: #a78bfa;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Марта 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+  </section>
+
+
+    <!-- ЕДИНАЯ КОРОБКА (КЛАСТЕР) ДЛЯ ФИЛИАЛА МИНОР -->
+  <section class="merge-box" data-branch="Минор">
+    
+    <div class="merge-box-header">
+      <div class="cluster-title">
+        <span class="branch-badge"><span class="badge-dot"></span>Филиал Минор</span>
+        <span>Kids слияния</span>
+      </div>
+      <span style="font-size: 12px; color: var(--text-muted);">Статус: Рекомендовано слияние</span>
+    </div>
+
+    <div class="cluster-grid">
+      
+      <article class="card">
+        <div class="card-header">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">Поток A</span>
+          <div class="direction-tag dir-frontend">Kids</div>
+        </div>
+
+        <div class="group-info">
+          <h2>IK-433</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar">СБ</div>
+            <div class="mentor-name">Ментор: <span>Сайдалиев Бехруз</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget">
+          <div class="progress-meta">
+            <span>Студентов: <strong>4</strong> / 12</span>
+            <span style="color: var(--amber); font-weight: 600;">33,3%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 40%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Вс (10:10)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Старт</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Июнь 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <div class="flow-sign">+</div>
+
+      <article class="card">
+        <div class="card-header">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">Поток A</span>
+          <div class="direction-tag dir-frontend">Kids</div>
+        </div>
+
+        <div class="group-info">
+          <h2>IK-503</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar">СБ</div>
+            <div class="mentor-name">Ментор: <span>Сайдалиев Бехруз</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget">
+          <div class="progress-meta">
+            <span>Студентов: <strong>4</strong> / 12</span>
+            <span style="color: var(--amber); font-weight: 600;">33,3%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 40%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Вс (15:00)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Старт</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Июнь 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <div class="flow-sign">➔</div>
+
+      <article class="card card-merged">
+        <div class="merged-banner">ИТОГ СЛИЯНИЯ</div>
+
+        <div class="card-header">
+          <span style="font-size: 12px; color: #a5b4fc; font-weight: 700;">Единый поток</span>
+          <div class="direction-tag dir-merged">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>IK-503</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar avatar-duo">СБ</div>
+            <div class="mentor-name">Менторы: <span>Сайдалиев Бехруз</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget" style="border-color: rgba(99, 102, 241, 0.3);">
+          <div class="progress-meta">
+            <span>Итого студентов: <strong>8</strong> / 12</span>
+            <span class="efficiency-tag">66,7%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 67%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer" style="border-color: rgba(99, 102, 241, 0.2);">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val" style="color: #38bdf8;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Вс (15:00)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Единый старт</span>
+            <span class="val" style="color: #a78bfa;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Июнь 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+  </section>
+
+    <section class="merge-box" data-branch="Минор">
+    
+    <div class="merge-box-header">
+      <div class="cluster-title">
+        <span class="branch-badge"><span class="badge-dot"></span>Филиал Минор</span>
+        <span>Frontend слияния</span>
+      </div>
+      <span style="font-size: 12px; color: var(--text-muted);">Статус: Рекомендовано слияние</span>
+    </div>
+
+    <div class="cluster-grid">
+      
+      <article class="card">
+        <div class="card-header">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">Поток A</span>
+          <div class="direction-tag dir-frontend">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nF-487</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar">ИА</div>
+            <div class="mentor-name">Ментор: <span>Илхомов Абубакир</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget">
+          <div class="progress-meta">
+            <span>Студентов: <strong>7</strong> / 12</span>
+            <span style="color: var(--amber); font-weight: 600;">59%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 40%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Пн • Ср • Пт (16:20)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Старт</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Июнь 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <div class="flow-sign">+</div>
+
+      <article class="card">
+        <div class="card-header">
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">Поток A</span>
+          <div class="direction-tag dir-frontend">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nF-391</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar">КЮ</div>
+            <div class="mentor-name">Ментор: <span>Косимов Юсуфхон</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget">
+          <div class="progress-meta">
+            <span>Студентов: <strong>2</strong> / 12</span>
+            <span style="color: var(--amber); font-weight: 600;">16%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 40%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Пн • Ср • Пт (17:30)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Старт</span>
+            <span class="val">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Июнь 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <div class="flow-sign">➔</div>
+
+      <article class="card card-merged">
+        <div class="merged-banner">ИТОГ СЛИЯНИЯ</div>
+
+        <div class="card-header">
+          <span style="font-size: 12px; color: #a5b4fc; font-weight: 700;">Единый поток</span>
+          <div class="direction-tag dir-merged">Frontend</div>
+        </div>
+
+        <div class="group-info">
+          <h2>nF-487</h2>
+          <div class="mentor-row">
+            <div class="mentor-avatar avatar-duo">ИА</div>
+            <div class="mentor-name">Менторы: <span>Илхомов Абубакир</span></div>
+          </div>
+        </div>
+
+        <div class="progress-widget" style="border-color: rgba(99, 102, 241, 0.3);">
+          <div class="progress-meta">
+            <span>Итого студентов: <strong>9</strong> / 12</span>
+            <span class="efficiency-tag">75%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 67%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+          </div>
+        </div>
+
+        <footer class="card-footer" style="border-color: rgba(99, 102, 241, 0.2);">
+          <div class="footer-pill">
+            <span class="label">Дни занятий</span>
+            <span class="val" style="color: #38bdf8;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+              Пн • Ср • Пт (16:20)
+            </span>
+          </div>
+          <div class="footer-pill">
+            <span class="label">Единый старт</span>
+            <span class="val" style="color: #a78bfa;">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              26 Июнь 2026
+            </span>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+  </section>
+
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
